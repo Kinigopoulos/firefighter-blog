@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/firefighter-blog/static/css/main.11e77fc6.chunk.css",
+    "main.js": "/firefighter-blog/static/js/main.fbcda299.chunk.js",
+    "main.js.map": "/firefighter-blog/static/js/main.fbcda299.chunk.js.map",
+    "runtime-main.js": "/firefighter-blog/static/js/runtime-main.b6884fea.js",
+    "runtime-main.js.map": "/firefighter-blog/static/js/runtime-main.b6884fea.js.map",
+    "static/js/2.13c5c74b.chunk.js": "/firefighter-blog/static/js/2.13c5c74b.chunk.js",
+    "static/js/2.13c5c74b.chunk.js.map": "/firefighter-blog/static/js/2.13c5c74b.chunk.js.map",
+    "index.html": "/firefighter-blog/index.html",
+    "static/css/main.11e77fc6.chunk.css.map": "/firefighter-blog/static/css/main.11e77fc6.chunk.css.map",
+    "static/js/2.13c5c74b.chunk.js.LICENSE.txt": "/firefighter-blog/static/js/2.13c5c74b.chunk.js.LICENSE.txt",
+    "static/media/fire.7a916192.svg": "/firefighter-blog/static/media/fire.7a916192.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6884fea.js",
+    "static/js/2.13c5c74b.chunk.js",
+    "static/css/main.11e77fc6.chunk.css",
+    "static/js/main.fbcda299.chunk.js"
+  ]
+}
