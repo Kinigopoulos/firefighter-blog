@@ -10,7 +10,7 @@ function Home() {
     const [photoToView, setPhotoToView] = useState(undefined);
 
     useEffect(() => {
-        axios.get("/api/landmarks").then(res => {
+        axios.get("https://firefighter-2376.instashop.ae/api/landmarks").then(res => {
             console.log(res);
             setPosts(res.data);
         })
