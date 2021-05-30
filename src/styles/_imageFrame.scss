@@ -1,0 +1,28 @@
+
+
+.imageFrameContainer{
+  position: fixed;
+  height: 90vh;
+  width: 90vw;
+  border: 1px solid #000000;
+  background: #2d2d2d;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.imageFrameButton{
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  font-weight: 800;
+  background: $buttonColor;
+}
+
+.imageFramePhoto{
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,44 @@
+
+@import "variables";
+
+.postContainer{
+  display: flex;
+  margin: 1.8rem 5rem;
+  padding: 0.5rem 2rem;
+  align-items: center;
+  background: $secondaryBackground;
+  border-radius: 20px;
+  transition: 0.2s ease-in;
+  border: 2px solid transparent;
+
+  &:hover{
+    background: $primaryBackground;
+    border-color: $secondaryBackground;
+  }
+}
+
+.postImageContainer{
+  margin-right: 20px;
+}
+
+.postImage{
+  height: 150px;
+  width: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.postTitle{
+  color: $primaryTitle;
+  cursor: pointer;
+
+  &:hover{
+    color: $buttonColor;
+  }
+}
+
+.postButton{
+  @extend .button;
+  width: fit-content;
+  font-size: 0.85rem;
+}

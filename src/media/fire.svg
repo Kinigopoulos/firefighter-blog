@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="fireIcon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);stroke:#000000;stroke-miterlimit:10;}
+</style>
+<radialGradient id="SVGID_1_" cx="130.8557" cy="127.5" r="102.3719" fx="131.4201" fy="229.8703" gradientTransform="matrix(1 -1.991360e-03 2.230324e-03 1.12 -0.2841 -15.0391)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FF3F00"/>
+	<stop  offset="0.1259" style="stop-color:#FF5700"/>
+	<stop  offset="0.2817" style="stop-color:#FF6D00"/>
+	<stop  offset="0.4305" style="stop-color:#FF7A00"/>
+	<stop  offset="0.5635" style="stop-color:#FF7F00"/>
+	<stop  offset="0.6295" style="stop-color:#FF8400"/>
+	<stop  offset="0.7106" style="stop-color:#FF9300"/>
+	<stop  offset="0.7995" style="stop-color:#FFAC00"/>
+	<stop  offset="0.8941" style="stop-color:#FFCF00"/>
+	<stop  offset="0.9922" style="stop-color:#FFFB00"/>
+	<stop  offset="1" style="stop-color:#FFFF00"/>
+</radialGradient>
+<path class="st0" d="M44,143c1.8-13.18,23-48,23-48c0.71-2.09,0.56-1.99,1.36,0.07l0.12,1.14c1.01,9.81,3.5,19.4,7.38,28.46L76,125
+	l1-10c0,0,5.96-29.78,10-39c4.73-10.81,19.37-29.95,28-38c8.88-8.28,41-26,41-26s-1.83,18.8-1,25c0.95,7.05,6.46,20.35,9,27
+	c4.1,10.71,13.75,31.75,16,43c1.28,6.38,1,26,1,26l35-44l-1,45c0,0,4.21,35.13,2.89,47.23c-1.36,12.51-9.76,26-30.89,39.77
+	c-22.05,14.37-43,22-56,22c-11.82,0-43-6-64-29C50.05,195.44,41.47,161.49,44,143z"/>
+</svg>

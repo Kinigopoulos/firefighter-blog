@@ -2,10 +2,12 @@
   "name": "firefighter-blog",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://firefighter-2376.instashop.ae",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -34,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "react-router-dom": "^5.2.0"
   }
 }

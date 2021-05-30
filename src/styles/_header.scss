@@ -1,0 +1,24 @@
+@import "variables";
+
+.headerContainer{
+  padding: 0.4rem 7rem;
+  background: $secondaryBackground;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerIcon{
+  height: 2.5rem;
+  margin-right: 10px;
+}
+
+.headerTitle{
+  font-family: Dubai, monospace;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: $primaryTitle;
+}
+
+.headerIconTitle{
+  display: flex;
+}

@@ -1,0 +1,22 @@
+$primaryBackground: #1c1c1c;
+$secondaryBackground: #2d2d2d;
+$primaryTitle: #ffffff;
+$primaryText: #d6d7d3;
+$buttonColor: #8900ff;
+
+
+.button{
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid $buttonColor;
+  color: #ffffff;
+  font-size: 21px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+
+  &:hover{
+    background: $buttonColor;
+  }
+}
