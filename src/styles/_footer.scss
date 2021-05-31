@@ -1,0 +1,22 @@
+
+@import "variables";
+
+.footer{
+  background: $secondaryBackground;
+  height: $footerSize;
+}
+
+.footerText{
+  margin: 0 2rem;
+
+  text-align: right;
+  line-height: 3rem;
+
+  a{
+    color: #14a6bf;
+  }
+
+  @media screen and (max-width: $medium) {
+    text-align: center;
+  }
+}

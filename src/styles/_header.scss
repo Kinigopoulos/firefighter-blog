@@ -1,10 +1,19 @@
 @import "variables";
 
 .headerContainer{
+  position: sticky;
+  top: 0;
   padding: 0.4rem 7rem;
   background: $secondaryBackground;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (max-width: $medium) {
+    padding: 0.4rem 0;
+
+    justify-content: space-around;
+  }
 }
 
 .headerIcon{
@@ -16,9 +25,62 @@
   font-family: Dubai, monospace;
   font-weight: 700;
   font-size: 1.8rem;
-  color: $primaryTitle;
+  transition: 0.2s ease-in;
+
+  @media screen and (max-width: $medium) {
+    font-size: 1.6rem;
+  }
 }
 
 .headerIconTitle{
   display: flex;
+  align-items: center;
+  color: $primaryTitle;
+  @media screen and (max-width: $medium) {
+    justify-content: center;
+  }
+
+  &:hover{
+    color: $buttonColor;
+  }
+}
+
+.headerMenu{
+  transition: 0.2s ease-in;
+
+  @media screen and (max-width: $medium) {
+    margin: 20px auto;
+    display: none;
+    transform: scaleY(0);
+    width: 100%;
+  }
+}
+
+.headerMenuActivated{
+  @extend .headerMenu;
+
+  @media screen and (max-width: $medium) {
+    display: block;
+    transform: scaleY(1);
+
+  }
+}
+
+.menuItem{
+
+  @media screen and (max-width: $medium) {
+    margin: auto;
+  }
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+  rect{
+    fill: $buttonColor;
+  }
+
+  @media screen and (max-width: $medium) {
+    display: block;
+  }
 }

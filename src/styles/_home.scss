@@ -3,17 +3,22 @@
 
 .postContainer{
   display: flex;
-  margin: 1.8rem 5rem;
+  margin: 1.8rem auto;
   padding: 0.5rem 2rem;
   align-items: center;
   background: $secondaryBackground;
   border-radius: 20px;
   transition: 0.2s ease-in;
   border: 2px solid transparent;
+  max-width: 65%;
 
   &:hover{
     background: $primaryBackground;
     border-color: $secondaryBackground;
+  }
+
+  @media screen and (max-width: $medium) {
+    flex-direction: column;
   }
 }
 

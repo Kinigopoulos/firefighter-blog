@@ -1,0 +1,27 @@
+
+@import "variables";
+@import "home";
+
+.post_PostContainer{
+  display: flex;
+  margin: 2rem 4rem;
+
+  @media screen and (max-width: $medium) {
+    display: block;
+    margin: 2rem 2rem;
+  }
+}
+
+.post_ImageContainer{
+  @extend .postImageContainer;
+}
+
+.post_Image{
+  @extend .postImage;
+  width: 30vw;
+  height: auto;
+}
+
+.post_url{
+  color: $buttonColor;
+}

@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import Header from "../components/Header";
 import {Link} from "react-router-dom";
-import ImageFrame from "../components/ImageFrame";
 
 
 function Home() {
@@ -40,13 +39,13 @@ function Home() {
                                      alt={post.photo_thumb.name}/>
                             </div>
                             <div>
-                                <Link to={`/post/${post.objectId}`}>
+                                <Link to={`/firefighter-blog/post/${post.objectId}`}>
                                     <h1 className="postTitle">{post.title}</h1>
                                 </Link>
 
                                 <p>{post.short_info}</p>
 
-                                <Link to={`/post/${post.objectId}`}>
+                                <Link to={`/firefighter-blog/post/${post.objectId}`}>
                                     <div className="postButton">
                                         Read More
                                     </div>

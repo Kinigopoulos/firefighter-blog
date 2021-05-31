@@ -1,9 +1,29 @@
+//Color Variables
 $primaryBackground: #1c1c1c;
 $secondaryBackground: #2d2d2d;
 $primaryTitle: #ffffff;
 $primaryText: #d6d7d3;
 $buttonColor: #8900ff;
 
+//Screen Size Variables
+$medium: 700px;
+
+//Sizes
+$footerSize: 3rem;
+
+
+//Global classes
+.primaryText{
+  color: $primaryTitle;
+}
+
+.centerText{
+  text-align: center;
+}
+
+.page{
+  min-height: calc(100vh - #{$footerSize});
+}
 
 .button{
   background: transparent;
@@ -15,6 +35,7 @@ $buttonColor: #8900ff;
   text-decoration: none;
   transition: 0.2s ease-out;
   cursor: pointer;
+  width: max-content;
 
   &:hover{
     background: $buttonColor;
