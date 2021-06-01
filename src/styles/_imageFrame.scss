@@ -18,7 +18,11 @@
   right: -20px;
   top: -20px;
   font-weight: 800;
-  background: $buttonColor;
+  background: $buttonColor !important;
+
+  &:hover{
+    background: $primaryBackground !important;
+  }
 }
 
 .imageFramePhoto{

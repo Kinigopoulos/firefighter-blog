@@ -10,8 +10,11 @@ function Home() {
 
     useEffect(() => {
         axios.get("https://firefighter-2376.instashop.ae/api/landmarks").then(res => {
-            console.log(res);
             setPosts(res.data);
+        }).catch(err => {
+            if(err.response.status === 400){
+                console.log("Error trying to fetch the landmarks")
+            }
         })
     }, []);
 

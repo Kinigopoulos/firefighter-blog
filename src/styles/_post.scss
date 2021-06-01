@@ -12,6 +12,37 @@
   }
 }
 
+.postTitle{
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  font-size: 2.5rem;
+  outline: none;
+  transition: 0.1s ease-in;
+
+  &.disabled{
+    cursor: text;
+  }
+}
+
+.postParagraph{
+  @extend .postTitle;
+  font-size: 1rem;
+  white-space: pre-wrap !important;
+  display: block !important;
+  max-width: 100%;
+  overflow: hidden !important;
+
+  &.disabled{
+    color: $primaryTitle;
+  }
+
+  &:focus{
+    color: $primaryTitle;
+  }
+}
+
 .post_ImageContainer{
   @extend .postImageContainer;
 }
@@ -24,4 +55,9 @@
 
 .post_url{
   color: $buttonColor;
+}
+
+.postActionsContainer{
+  margin-top: 2rem;
+  display: flex;
 }
