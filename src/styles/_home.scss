@@ -25,6 +25,10 @@
 
 .postImageContainer{
   margin-right: 20px;
+
+  @media screen and (max-width: $medium) {
+    margin-right: 0;
+  }
 }
 
 .postImage{

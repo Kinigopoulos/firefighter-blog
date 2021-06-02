@@ -32,15 +32,19 @@ function Header() {
                     console.log(res);
                     if (res.status === 200) {
                         removeCookie('user-token', { path: '/' });
-                        window.location.reload();
+                        //window.location.reload();
+                        window.location = '/firefighter-blog';
                     }
                 }).catch(err => {
                 if (err.response.status === 401) {
                     console.log("Missing or invalid session token");
                     removeCookie('user-token',  { path: '/' });
-                    window.location.reload();
+                    //window.location.reload();
+                    window.location = '/firefighter-blog';
                 }
             });
+
+
         };
 
         return (
