@@ -43,8 +43,8 @@ function Post() {
                 setMessage({message: res.data.message, color: "success"});
             }).catch(err => {
                 if(err.response.status === 400){
-                    console.log("Bad Request");
-                    setMessage({message: "Bad Request", color: "fail"});
+                    console.log(err.response.data);
+                    setMessage({message: err.response.data.message, color: "fail"});
                 } else if(err.response.status === 401){
                     console.log("Missing or invalid session token");
                     setMessage({message: "Missing or invalid session token", color: "fail"});
@@ -75,7 +75,12 @@ function Post() {
                             {post.title}
                         </div>
 
-                        <a className="post_url" href={post.url}>{post.url}</a>
+                        <a className="post_url" href={post.url} target="_blank" rel="noreferrer">{post.url}</a>
+                        <br/>
+                        <span className="primaryText">
+                            Location: [{post.location[0]}, {post.location[1]}]
+                        </span>
+
                         <hr/>
                         <div contentEditable={isLogged} suppressContentEditableWarning={true} onBlur={postChange}
                              className={`primaryText postParagraph ${!isLogged && "disabled"}`} id="short_info">
