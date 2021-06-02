@@ -3,11 +3,13 @@ import {Link, useParams} from "react-router-dom";
 import Header from "../components/Header";
 import axios from "axios";
 import {useCookies} from "react-cookie";
+import MessagePopup from "../components/MessagePopup";
 
 function Post() {
     const [post, setPost] = useState(undefined);
     const [cookies] = useCookies(['user-token']);
     const [isLogged, setIsLogged] = useState(false);
+    const [message, setMessage] = useState({message: '', color: ''});
     const {id} = useParams();
 
     useEffect(() => {
@@ -16,8 +18,10 @@ function Post() {
         }).catch(err => {
             if (err.response.status === 400) {
                 console.log("Error trying to fetch this landmark");
+                window.alert("Error trying to fetch this landmark (400)");
             } else if (err.response.status === 404) {
-                console.log("Object not found")
+                console.log("Object not found");
+                window.alert("Object not found (404)");
             }
         });
         setIsLogged(cookies.hasOwnProperty('user-token'));
@@ -34,17 +38,19 @@ function Post() {
             title: post.title,
             "short_info": post['short_info'],
             description: post.description
-        })
+        }, {headers: {"x-sessionToken": cookies['user-token'].sessionToken}})
             .then(res => {
-                console.log(res);
+                setMessage({message: res.data.message, color: "success"});
             }).catch(err => {
                 if(err.response.status === 400){
                     console.log("Bad Request");
-                    console.log(err.response);
+                    setMessage({message: "Bad Request", color: "fail"});
                 } else if(err.response.status === 401){
-                    console.log("Missing or invalid session token")
+                    console.log("Missing or invalid session token");
+                    setMessage({message: "Missing or invalid session token", color: "fail"});
                 } else if(err.response.status === 404){
-                    console.log("Object not found")
+                    console.log("Object not found");
+                    setMessage({message: "Object not found", color: "fail"});
                 }
         })
     }
@@ -52,6 +58,7 @@ function Post() {
     return (
         <>
             <Header/>
+            <MessagePopup message={message.message} color={message.color}/>
             <div>
                 {post !== undefined &&
                 <div className="post_PostContainer">

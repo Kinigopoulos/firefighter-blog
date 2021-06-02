@@ -1,0 +1,36 @@
+@import "variables";
+
+
+.messageContainer{
+  position: fixed;
+  bottom: 0;
+  z-index: 30;
+  margin: 2rem;
+  left: -100%;
+
+  text-shadow: 1px 1px 1px black;
+  transition: 0.2s ease-in-out;
+
+  &.active{
+    left: 0;
+  }
+
+  .success{
+    padding: 1rem 3.5rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    background: $secondaryBackground;
+    border: 3px solid rgb(37, 135, 25);
+
+    @media screen and (max-width: $medium) {
+      font-size: 0.9rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  .fail{
+    @extend .success;
+    border-color: rgb(135, 4, 10);
+  }
+}

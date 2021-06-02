@@ -48,10 +48,10 @@ function Home() {
 
                                 <p>{post.short_info}</p>
 
-                                <Link to={`/firefighter-blog/post/${post.objectId}`}>
-                                    <div className="postButton">
+                                <Link to={`/firefighter-blog/post/${post.objectId}`} className="postButton">
+
                                         Read More
-                                    </div>
+
                                 </Link>
                             </div>
                         </div>

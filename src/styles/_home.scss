@@ -13,13 +13,14 @@
   max-width: 65%;
 
   &:hover{
-    background: $primaryBackground;
+    filter: brightness(1.1);
     border-color: $secondaryBackground;
   }
 
   @media screen and (max-width: $medium) {
     flex-direction: column;
   }
+
 }
 
 .postImageContainer{
@@ -44,6 +45,7 @@
 
 .postButton{
   @extend .button;
+  display: block;
   width: fit-content;
   font-size: 0.85rem;
 }

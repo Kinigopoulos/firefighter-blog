@@ -7,7 +7,7 @@ import {useCookies} from "react-cookie";
 function Header() {
 
     const [menuActive, setMenuActive] = useState(false);
-    const [cookies, , removeCookies] = useCookies(['user-token']);
+    const [cookies, ,removeCookie] = useCookies(['user-token']);
 
     const toggleMenuActive = () => {
         setMenuActive(!menuActive);
@@ -26,13 +26,19 @@ function Header() {
     function LogoutButton() {
 
         const logOut = () => {
-            axios.get("https://firefighter-2376.instashop.ae/api/users/logout").then(res => {
-                if(res.response.status === 200){
-                    removeCookies('user-token', '/')
-                }
-            }).catch(err => {
-                if (err.response.status === 401){
-                    console.log("Missing or invalid session token")
+            axios.get("https://firefighter-2376.instashop.ae/api/users/logout",
+                {headers: {"x-sessionToken": cookies['user-token'].sessionToken}})
+                .then(res => {
+                    console.log(res);
+                    if (res.status === 200) {
+                        removeCookie('user-token', { path: '/' });
+                        window.location.reload();
+                    }
+                }).catch(err => {
+                if (err.response.status === 401) {
+                    console.log("Missing or invalid session token");
+                    removeCookie('user-token',  { path: '/' });
+                    window.location.reload();
                 }
             });
         };

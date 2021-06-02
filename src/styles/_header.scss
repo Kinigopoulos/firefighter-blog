@@ -13,6 +13,7 @@
     padding: 0.4rem 0;
     justify-content: space-around;
   }
+  z-index: 10;
 }
 
 .headerIcon{
@@ -21,7 +22,7 @@
 }
 
 .headerTitle{
-  font-family: Dubai, monospace;
+  font-family: 'Dubai', monospace;
   font-weight: 700;
   font-size: 1.8rem;
   transition: 0.2s ease-in;
